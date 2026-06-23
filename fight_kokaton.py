@@ -203,7 +203,6 @@ def main():
                         score.value += 1
         bombs = [bomb for bomb in bombs if bomb is not None]  
         beams = [beam for beam in beams if beam is not None]
-        
         beams = [beam for beam in beams if check_bound(beam.rct) == (True, True)]         
 
         key_lst = pg.key.get_pressed()
