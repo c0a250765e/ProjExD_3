@@ -168,7 +168,7 @@ def main():
             
         if bomb is not None:
             if beam is not None:
-                if beam.rct .collidedict(bomb.rct):
+                if beam.rct .colliderect(bomb.rct):  #ビームで爆弾を打ち落としたら
                     beam = None
                     bomb = None
 
@@ -176,7 +176,7 @@ def main():
         bird.update(key_lst, screen)
         if beam is not None:
             beam.update(screen)   
-        if beam is not None:    
+        if bomb is not None:    
             bomb.update(screen)
         pg.display.update()
         tmr += 1
